@@ -1,7 +1,9 @@
+/*============ IMPORTS DE MODULES ET D'ÉLÉMENTS REACT =============================================*/
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
