@@ -1,19 +1,48 @@
 /* CSS DE L'APPLICATION */
 
-.questions {
+.reponsesContainer {
   display: flex;
   flex-direction : column;
 }
-
+/*
 .reponses {
-    background-color: #008CBA; 
+    background-color: #008CBA;
     color: white;
     padding: 15px 32px;
     text-decoration: none;
     font-size: 15px;
     margin: 5px;
+}*/
+.reponses {
+  color: #FFFFFF;
+  background: #008CBA;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 5px;
+  text-shadow: 4px 3px 0 #7A7A7A;
 }
+
 
 button {
   border-radius: 8px;
+}
+
+.reponse {
+  font-size: 20px;
+  color : #0000FF;
+}
+
+/*
+h1 {
+  text-align: center;
+  color : #0000FF;
+  text-shadow: 2px 2px 8px #33FF64;
+}*/
+
+h1 {
+  color: #FFFFFF;
+  background: #232323;
+  text-shadow: 0 0 5px #33FF64, 0 0 10px #33FF64, 0 0 15px #33FF64, 0 0 20px #33FF64, 0 0 30px #33FF64, 0 0 40px #33FF64, 0 0 55px #33FF64, 0 0 75px #33FF64;
+  text-align: center;
+
 }
