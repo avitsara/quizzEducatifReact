@@ -2,9 +2,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Fragment } from 'react';
-import { Score } from './Score';
 import  QuestionsReponses  from './QuestionsReponses';
 
+/*============ CLASSE PRINCIPALE DE L'APPLICATION =============================================*/
 class App extends React.Component {
 
 
@@ -12,7 +12,7 @@ class App extends React.Component {
       return (
         <Fragment>
             <QuestionsReponses>  </QuestionsReponses>
-            <Score> </Score>
+        
 
 
         </Fragment>

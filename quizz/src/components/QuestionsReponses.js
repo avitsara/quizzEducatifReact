@@ -2,9 +2,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Fragment } from 'react';
+import { useState } from 'react';
+
 
 /*================  COMPOSANT REPRÉSENTANT LES QUESTIONS ET LES RÉPONSES =================*/
 function QuestionsReponses(){
+      /// variables d'état = questionCourante + score
+      // setQuestionCourante = fonction qui va altérer la variable d'état questionCourante
+      // setScore = fonction qui va altérer la variable d'état score
+      // useState() = Hook permettant de bénéficier d'un état courant
+      const [questionCourante, setQuestionCourante] = useState(0);
+      const [score,setScore] = useState(true);
+
+     /// Fonction pour gérer les clicks sur les réponses
+     // le click sur une des réponses permet de passer à la question suivante
+     const gestionQuestionsClick = () => {
+        const questionSuivante = questionCourante + 1;
+        if ( questionSuivante === questions.length){
+          alert("Nombre max de questions atteint");
+        } else {
+          setQuestionCourante(questionSuivante);
+        }
+
+     }
+
+     // Permet modifier le score du joueur
+     const modifScore = (correct) => {
+       if (correct){
+         setScore(score + 1)
+       }
+       
+     }
+
+
 
       const questions = [
         {
@@ -43,14 +73,14 @@ function QuestionsReponses(){
           <div className="container">
             <div className="questions">
                   <h1> Bienvenue dans ce Quizz éducatif !!!  </h1>
-                  <span>Question 1</span>/{questions.length}
-                  <h2 className="question"> { questions[0].question}  </h2>
+                  <span> { questionCourante +1} </span>/{questions.length}
+                  <h2 className="question"> { questions[questionCourante].question}  </h2>
                   <div className="reponsesContainer">
-                    {questions[0].reponses.map((reponse) => <button className="reponses">  {reponse.reponse} </button>)}
+                    {questions[questionCourante].reponses.map((reponse) => <button onClick={gestionQuestionsClick} className="reponses">  {reponse.reponse} </button>)}
 
                   </div>
             </div>
-
+            <h2> Votre score est {score} </h2>
 
           </div>
 
